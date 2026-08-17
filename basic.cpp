@@ -187,3 +187,13 @@ int main(){
 }
 
 // c++ m koi bhi math k formula implement krte hai to vo left toright hoti hai : 2* 3/4 = 6/4 = 1.5 ,, 3/4 *2 = o.7 *2 = 0 
+
+//BOOLEAN DATA TYPE :
+#include<iostream>
+using namespace std ;
+int main(){
+    bool x = true ;
+    bool y = false ;
+    cout<< x <<endl ;  //true is print as 1
+    cout<< y <<endl ;  //false is print as 0    
+}

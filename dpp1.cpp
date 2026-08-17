@@ -78,3 +78,4 @@
 //     int add = (7 - reminder) % 7 ;
 //     cout<< add ;
 // }
+

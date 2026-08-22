@@ -208,34 +208,34 @@
 
 
 // given a point(x,y) check whether it lies in the first quadrant , second quadrant , third quadrant or fourth quadrant , on the x-axis or y-axis or origin
-#include<iostream>
-using namespace std ;
-int main(){
-    int x,y;
-    cout<< "Enter the point(x,y):";
-    cin>>x>>y;
-    if(x>0 && y>0){
-        cout<< "point lies in first quadrant:";
-    }
-    else if(x>0 && y<0){
-        cout<<"points lies in fourth quadrant";
-    }
-    else if(x<0 && y<0){
-        cout<<"point lies in third quadrant";
-    }
-    else if(x<0 && y>0){
-        cout<<"point lies in second quadrant";
-    }
-    else if(x==0 && y==0){
-        cout<<"point lies on origin";
-    }
-    else if(x==0 && y!=0){
-        cout<<"point lies on y-axis";
-    }
-    else if(x!=0 && y==0){
-        cout<<"point lies on x-axis";
-    }
-}
+// #include<iostream>
+// using namespace std ;
+// int main(){
+//     int x,y;
+//     cout<< "Enter the point(x,y):";
+//     cin>>x>>y;
+//     if(x>0 && y>0){
+//         cout<< "point lies in first quadrant:";
+//     }
+//     else if(x>0 && y<0){
+//         cout<<"points lies in fourth quadrant";
+//     }
+//     else if(x<0 && y<0){
+//         cout<<"point lies in third quadrant";
+//     }
+//     else if(x<0 && y>0){
+//         cout<<"point lies in second quadrant";
+//     }
+//     else if(x==0 && y==0){
+//         cout<<"point lies on origin";
+//     }
+//     else if(x==0 && y!=0){
+//         cout<<"point lies on y-axis";
+//     }
+//     else if(x!=0 && y==0){
+//         cout<<"point lies on x-axis";
+//     }
+// }
 
 
 
@@ -259,84 +259,84 @@ int main(){
 
 // .--------->.     varible inside if else block :
 
-#include<iostream>
-using namespace std ;
-int main(){
-    int x = 0;        // 0 represent false 
-    if(x){             // if(x)  means if(false)
-        cout<<"ram";
-    }
-    else{
-        cout<<"shyam";
-    }
-}                        // output shyam
+// #include<iostream>
+// using namespace std ;
+// int main(){
+//     int x = 0;        // 0 represent false 
+//     if(x){             // if(x)  means if(false)
+//         cout<<"ram";
+//     }
+//     else{
+//         cout<<"shyam";
+//     }
+// }                        // output shyam
 
 
-#include<iostream>
-using namespace std ;
-int main(){
-    int x = 1;        // 1 represent true 
-    if(x){             // if(x)  means if(true)
-        cout<<"ram";
-    }
-    else{
-        cout<<"shyam";
-    }
-}                       // output ram
+// #include<iostream>
+// using namespace std ;
+// int main(){
+//     int x = 1;        // 1 represent true 
+//     if(x){             // if(x)  means if(true)
+//         cout<<"ram";
+//     }
+//     else{
+//         cout<<"shyam";
+//     }
+// }                       // output ram
 
-#include<iostream>
-using namespace std ;
-int main(){
-    int x = 32;        // any non-zero value represent true  either it is positive or negative
-    if(x){             // if(x)  means if(true)
-        cout<<"ram";
-    }
-    else{
-        cout<<"shyam";
-    }
-}                         // output ram
-
-
-
-#include<iostream>
-using namespace std ;
-int main(){
-    int x=2;
-    if(x==2){
-        cout<<"ram";
-    }
-    else{
-        cout<<"shyam";
-    }
-}                         // output ram
+// #include<iostream>
+// using namespace std ;
+// int main(){
+//     int x = 32;        // any non-zero value represent true  either it is positive or negative
+//     if(x){             // if(x)  means if(true)
+//         cout<<"ram";
+//     }
+//     else{
+//         cout<<"shyam";
+//     }
+// }                         // output ram
 
 
 
-#include<iostream>
-using namespace std ;
-int main(){
-    int x=2;
-    if(x=0){                // starting m x=2 x me 2 asign kra tha prr if satment m x ki new value assign ho gyi to if and else use value k according chlega
-        cout<<"ram";
-    }
-    else{
-        cout<<"shyam";
-    }
-}                         // output shyam
+// #include<iostream>
+// using namespace std ;
+// int main(){
+//     int x=2;
+//     if(x==2){
+//         cout<<"ram";
+//     }
+//     else{
+//         cout<<"shyam";
+//     }
+// }                         // output ram
 
 
 
-#include<iostream>
-using namespace std ;
-int main(){
-    int x=2;
-    if(x++){           // x=2 de rkha hai any value except 0 means true so if statment run but condition say x++ means in if x=2 but in next value in other line of code x=3
-        cout<<x;
-    }
-    else{
-        cout<<"shyam";
-    }
-}                         // output 3
+// #include<iostream>
+// using namespace std ;
+// int main(){
+//     int x=2;
+//     if(x=0){                // starting m x=2 x me 2 asign kra tha prr if satment m x ki new value assign ho gyi to if and else use value k according chlega
+//         cout<<"ram";
+//     }
+//     else{
+//         cout<<"shyam";
+//     }
+//}                         // output shyam
+
+
+
+// #include<iostream>
+// using namespace std ;
+// int main(){
+//     int x=2;
+//     if(x++){           // x=2 de rkha hai any value except 0 means true so if statment run but condition say x++ means in if x=2 but in next value in other line of code x=3
+//         cout<<x;
+//     }
+//     else{
+//         cout<<"shyam";
+//     }
+// }                         // output 3
 
 
 
@@ -345,4 +345,35 @@ int main(){
 
 // ternary operator if else ko single line m likhne k liye use kiya jaaata hai  ye teen chijo p work krta hai = condition ? sach : jhut 
 
-#include<iomanip>
+#include<iostream>
+using namespace std ;
+int main(){
+    int n;
+    cout<<"Enter the number:";
+    cin>>n;
+    (n%2==0) ? cout<<"The number is even" : cout<<"The number is odd";   // if n%2==0 is true then cout<<"The number is even" will execute otherwise cout<<"The number is odd" will execute
+    cout<<((n%2 == 0) ? "The number is even" : "The number is odd");   // if n%2==0 is true then cout<<"The number is even" will execute otherwise cout<<"The number is odd" will execute
+    // uper k dono treke same hai kuch bhi use krr sakte h
+}
+
+// ternary in variable :
+
+#include<iostream>
+using namespace std ;
+int main(){
+    int x =6;
+    int y=(x< 12) ? x-4 : x*4 ;   // if x<12 is true then y=x-4 will execute otherwise y=x*4 will execute
+    cout<<y;
+}
+
+
+// .--------->.     nested ternary operator :
+
+#include<iostream>
+using namespace std ;
+int main(){
+    int x = 6;
+    int y = (x<12) ? ((x>12) ? x-4 : x*4) : ((x++ < 12) ? x+4 : x-4) ;    
+    cout<<y;
+}
+

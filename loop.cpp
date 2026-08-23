@@ -343,3 +343,83 @@ int main(){
         i++;
     }
 }
+
+
+
+// count digit of a number:
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter the number:";
+    cin>>n;
+    int count = 0;
+    if(n==0){
+        count = 1;
+    }
+    while(n!=0){
+        n/=10;
+        count++;
+    }
+    cout<< count;
+}
+
+
+//Print the sum of digit:
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a;
+    int n ;
+    cout<<"Enter the number:";
+    cin>>n;
+    int count=0;
+    while(n!=0){
+        a=n%10;
+        count = count+a;
+        n/=10;
+    }
+    cout<<count;
+}
+
+
+
+//reverse of a digit:
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a;
+    int n ;
+    cout<<"Enter the number:";
+    cin>>n;
+    int count=0;
+    while(n!=0){
+        a=n%10;
+        count = count*10 +a;
+        n/=10;
+    }
+    cout<<count;
+}
+
+
+//factorial:
+
+#include<iostream>
+using namespace std;
+int main(){
+    int i;
+    int n;
+    cout<<"Enter a number:";
+    cin>>n;
+    long long fact= 1;
+    for(i=1;i<=n;i++){
+        fact = fact*i;
+    }
+    cout<<fact;
+}
+
+//`long long` C++ ka ek data type hai jo `int` ki comparison me bahut bade whole numbers ko store karne ke liye use hota hai.
+//`long long` isliye use kiya hai kyunki factorial ka answer bahut jaldi bada ho jata hai, aur `int` itne bade number ko store nahi kar sakta. `float` decimal values ke liye hota hai, jabki factorial ka answer whole number hota hai.

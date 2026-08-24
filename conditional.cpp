@@ -377,3 +377,32 @@ int main(){
     cout<<y;
 }
 
+
+// Switch Case – Fall Through & Break
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int code = 2;   // code ki value 2 hai
+
+    switch (code) {   // code ki value ke according case match hoga
+
+        case 1:
+            cout << "Alpha" << endl;   // code = 1 hota to yahan se execution start hota, Lekin abhi code = 2 hai, isliye case 1 skip hoga
+
+        case 2:
+            cout << "Beta" << endl; // code = 2 hai, isliye case 2 match hua ,Yahan "Beta" print hoga, Is case ke baad break nahi hai, isliye execution next case me chala jayega
+
+        case 3:
+            cout << "Gamma" << endl;  // case 2 ke baad break nahi tha,isliye case 3 bhi execute hoga ,Yahan "Gamma" print hoga
+
+            break;                    // break switch statement ko yahin stop kar deta hai   
+
+        default:
+            cout << "Omega" << endl; // Agar koi bhi case match nahi hota, to default execute hota hai
+    }
+
+    return 0;
+}

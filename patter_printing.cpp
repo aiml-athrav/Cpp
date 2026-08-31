@@ -358,14 +358,31 @@ int main(){
 // * * 
 // * 
 
+//Method 1:
 #include<iostream>
 using namespace std;
 int main(){
     int i,j;
     int n;
-    cout<<"enter the number n+1:";
+    cout<<"enter the number n:";
     cin>>n;
     for(i=1;i<=n;i++){
+        for(j=1;j<=n+1-i;j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+
+//Method 2:
+#include<iostream>
+using namespace std;
+int main(){
+    int i,j;
+    int n;
+    cout<<"enter the number n:";
+    cin>>n;
+    for(i=0;i<=n;i++){
         for(j=1;j<=n-i;j++){
             cout<<"* ";
         }

@@ -331,3 +331,32 @@ int main(){
     cout<<x;     //output is 10 because x is global variable and it can be accessed by any function in the program
     return 0;
 }
+
+
+//global vs local variable : local variable have high priority than global variable means if we have a local variable and a global variable with the same name then the local variable will be used in the function and the global variable will be ignored
+#include<iostream>
+using namespace std;
+int x=10;   //global variable
+void change(){
+
+}
+int main(){
+    cout<<x<<endl;   //output is 10 because x is global variable and it can be accessed by any function in the program
+    int x=20;   //local variable
+    cout<<x;   //output is 20 because x is local variable and it will be used in the function and the global variable will be ignored
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int x=10;   //global variable
+void change(){
+    x=100;   
+}
+int main(){
+    int x=20;   //local variable
+    cout<<x<<endl;   //output is 20 because x is local variable and it can be accessed by any function in the program
+    change();   //calling function change
+    cout<<x;   //output is 20 because x is local variable and it will be used in the function and the global variable will be ignored
+    return 0;
+}   

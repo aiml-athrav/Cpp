@@ -360,3 +360,88 @@ int main(){
     cout<<x;   //output is 20 because x is local variable and it will be used in the function and the global variable will be ignored
     return 0;
 }   
+
+//variable shadowing
+
+#include<iostream>
+using namespace std;
+int main(){
+    int x=10;
+    {
+        int x = 30;
+    }
+    cout<<x;         //output is 10 because int x=30 is initalise inside a specific block and cout is declare outside a block  
+}
+
+
+//if we don't use int in int x=30 then output is 30because in this we don't create a new variable we assign new variable to already declared variable 
+#include<iostream>
+using namespace std;
+int main(){
+    int x=10;
+    {
+        x = 30;
+    }
+    cout<<x;         //output is 30 because we are not creating a new variable, but assigning a new value to the existing variable
+}
+
+
+
+
+// agr hmm ek code m multiple function use kr k ya multiple blocks bna k jo { } in bracket se bante hai unme multiple type ek hi variable ko use kr rhe  hai to agr int ,float,char ,bool , etc use krte hai to mtlb new variable assign kr rhe chahe variable same dikhe pr vo us function ya block k liye local varible ki tra kaam krta hai aur agr int,bool,float,char,etc use nhi krte hai to vo already exist varible m new value assign kr rha hai  
+
+
+//Acessing global variable in function:
+#include<iostream>
+using namespace std;
+int x=10;   //global variable
+int main(){
+    int x =20;
+    cout<<x<<endl;     //output is 20 because x is local variable and it will be used in the function and the global variable will be ignored
+    cout<<::x;         //output is 10 because ::x is used to access the global variable x and it can be accessed by any function in the program
+    return 0;
+}
+
+// ::x is called scope resolution operator and it is used to access the global variable x when there is a local variable with the same name in the function. It tells the compiler to use the global variable instead of the local variable.
+
+
+
+
+
+//function overloading (case1): same function name ,same function type but different number of parameter
+
+
+#include<iostream>
+using namespace std;
+void chai(){
+    cout<<"hello"<<endl;
+}
+void chai(int x){
+    cout<<"hey"<<endl;
+}
+void chai(int x, int y){
+    cout<<"hiii"<<endl;
+}
+int main(){
+    chai();   //print the output of 1st void fnc.
+    chai(45); //print the output of 2nd void fnc.
+    chai(2,5);//print the output of 3rd void fnc.
+}
+
+
+
+// if we provide default values to the parameters whats happen :
+#include<iostream>
+using namespace std;
+void chai(){
+    cout<<"hello"<<endl;
+}
+void chai(int x =10){   //here we provide default value to the parameter x
+    cout<<"hey"<<endl;
+}
+int main(){
+    //chai();   //here it will show error because in second fnc we provide default value so if we don;t provide vale still second function can be run but at same side first fnc do not have any parameter so is also run so it will show error because both function can be run at same time so compiler will not know which function to run so it will show error
+    chai(45); //print the output of 2nd void fnc.
+}
+
+////function overloading (case2): same function name ,same function type but different types of parameter

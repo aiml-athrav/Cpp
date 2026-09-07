@@ -347,6 +347,10 @@ int main(){
     return 0;
 }
 
+
+//--------------
+
+
 #include<iostream>
 using namespace std;
 int x=10;   //global variable
@@ -433,15 +437,100 @@ int main(){
 // if we provide default values to the parameters whats happen :
 #include<iostream>
 using namespace std;
-void chai(){
+void dudh(){
     cout<<"hello"<<endl;
 }
-void chai(int x =10){   //here we provide default value to the parameter x
+void dudh(int x =10){   //here we provide default value to the parameter x
     cout<<"hey"<<endl;
 }
 int main(){
-    //chai();   //here it will show error because in second fnc we provide default value so if we don;t provide vale still second function can be run but at same side first fnc do not have any parameter so is also run so it will show error because both function can be run at same time so compiler will not know which function to run so it will show error
-    chai(45); //print the output of 2nd void fnc.
+    //dudh();   //here it will show error because in second fnc we provide default value so if we don;t provide vale still second function can be run but at same side first fnc do not have any parameter so is also run so it will show error because both function can be run at same time so compiler will not know which function to run so it will show error
+    dudh(45); //print the output of 2nd void fnc.
 }
 
-////function overloading (case2): same function name ,same function type but different types of parameter
+
+
+
+
+//function overloading (case2): same function name ,same function type but different types of parameter
+
+#include<iostream>
+using namespace std;
+void milk(int x){    
+    cout<<"hello"<<endl;
+}
+void milk(double x){   
+    cout<<"hey"<<endl;
+}
+void milk(char x){
+    cout<<"hiii"<<endl;
+}
+int main(){
+    milk(4.0);   //print the output of 2nd void fnc.
+    milk(45); //print the output of 1st void fnc.
+    milk('A');//print the output of 3rd void fnc.
+}
+
+
+
+
+//function overloading (case3): same function name ,same function type ,have same number of parameter and same type of parameter but parameters types are overlapp
+
+#include<iostream>
+using namespace std;
+void milk(int x, double y){
+    cout<<"hello"<<endl;
+}
+void milk(double x, int y){
+    cout<<"hey"<<endl;
+}
+int main(){
+    milk(4.0, 5);   //print the output of 2nd void fnc.
+    milk(45, 4.0); //print the output of 1st void fnc.
+}
+
+//swaping of two number:
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cin>>a>>b;
+    cout<<a<<" "<<b<<endl;
+    int temp =a;
+    a = b;
+    b = temp;
+    cout<<a<<" "<<b;
+}
+
+// swaping of two number using function:
+
+// method 1: using call by value
+#include<iostream>
+using namespace std;
+
+void swap(int a,int b){
+    int temp =a;
+    a=b;
+    b=temp;
+    cout<<a<<" "<<b;
+}
+int main(){
+    swap(2,4);
+}
+
+
+
+
+// void function mein jo bhi hum print karwate hain, bas woh screen par show hota hai, lekin function koi value return nahi karta. Isliye us value ko kisi variable mein store karke directly baar-baar use nahi kar sakte.  Lekin return function mein function ki value return hoti hai aur function ke bahar pass ho jaati hai. Hum us returned value ko kisi variable mein store karke multiple times use kar sakte hain.
+//EXAMPLE OF ABOVE STATEMENT:
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x = add(4, 5);  // x = 9
+
+    cout << x << endl;      // 9
+    cout << x * 2 << endl;  // 18
+    cout << x + 10 << endl; // 19
+}

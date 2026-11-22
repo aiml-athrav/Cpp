@@ -330,7 +330,33 @@ int main() {
     }
 }
 
-
+//Method 3:
+#include<iostream>
+using namespace std;
+int main(){
+    int count=0;
+    int n;
+    cout<<"enter a number";
+    cin>>n;
+    
+    if(n==1){
+        cout<<"neither a prime not a composite number";
+    }
+    
+    else{
+        for(int i=2;i<=n;i++){
+            if(n%i == 0){
+                count++;
+            }
+        }
+        if(count>=2){
+            cout<<"composite number:";
+        }
+        else{
+            cout<<"prime number";
+        }
+    }
+}
 
 // WHILE LOOP:
 

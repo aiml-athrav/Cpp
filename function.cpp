@@ -505,20 +505,34 @@ int main(){
 // swaping of two number using function:
 
 // method 1: using call by value
+// #include<iostream>
+// using namespace std;
+
+// void swap(int a,int b){
+//     int temp =a;
+//     a=b;
+//     b=temp;
+//     cout<<a<<" "<<b;
+// }
+// int main(){
+//     swap(2,4);
+// }
+
+//without use of third variable:
 #include<iostream>
 using namespace std;
-
-void swap(int a,int b){
-    int temp =a;
-    a=b;
-    b=temp;
+void swap(int a ,int b){
+    a =a+b;
+    b =a-b;
+    a =a-b;
     cout<<a<<" "<<b;
 }
 int main(){
-    swap(2,4);
+    int a,b;
+    cout<<"enter two number:";
+    cin>>a>>b;
+    swap(a,b);
 }
-
-
 
 
 // void function mein jo bhi hum print karwate hain, bas woh screen par show hota hai, lekin function koi value return nahi karta. Isliye us value ko kisi variable mein store karke directly baar-baar use nahi kar sakte.  Lekin return function mein function ki value return hoti hai aur function ke bahar pass ho jaati hai. Hum us returned value ko kisi variable mein store karke multiple times use kar sakte hain.

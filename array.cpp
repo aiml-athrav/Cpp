@@ -51,10 +51,11 @@ int main(){
 //Method 1: removing the largest element from the array ;
 
 #include<iostream>
+#include<climits>
 using namespace std;
 int main(){
     int arr[]={10,30,50,40,39};
-    int mx=0, i,index=0;
+    int mx=INT_MIN, i,index=0;
     int x= sizeof(arr)/4;
     for(i =0; i<x;i++){
         if(mx<arr[i]){
@@ -64,7 +65,7 @@ int main(){
       
     }
     arr[index]=0;
-    int mx2 = 0;
+    int mx2 = INT_MIN;
     for(int i = 0;i<x;i++){
         if(mx2<arr[i]){
             mx2=arr[i];
@@ -75,3 +76,41 @@ int main(){
 
 
 //Method 2:
+
+
+#include<iostream>
+#include<climits>
+using namespace std;
+int main(){
+    int arr[] = {10,40,50,36,23};
+    int x = sizeof(arr)/4;
+    int mx= INT_MIN;
+    int index = 0;
+    for(int i=0; i<x ;i++){
+        if(mx < arr[i]){
+            mx = arr[i];
+            index = i;
+        }
+    }
+    int mx2=INT_MIN;
+    for(int i=0;i<x;i++){
+        if(mx2<arr[i] && arr[i] != mx){
+            mx2=arr[i];
+        }
+    }
+    cout<<mx2;
+}
+
+// Address of array elements:
+
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[] = {10,35,7,8,9,42,23,34};
+    cout<<&arr[0]<<endl;    // storing the address of first element of array
+    cout<<&arr[1]<<endl;
+    cout<<&arr[2]<<endl;
+    cout<<&arr[3]<<endl;
+
+    cout<<arr<<endl; // storing the address of first element of array also this address is name as the address of array    cout<<arr == cout<<&arr[0] , both are same
+}

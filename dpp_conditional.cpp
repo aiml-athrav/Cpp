@@ -229,3 +229,52 @@ int main(){
         cout<<"net bill is $"<<c+y;
     }
 }
+
+//Count number of odd digits in a number
+#include<iostream>
+using namespace std;
+int main(){
+    int n= 77777777;
+    int count = 0;
+    while(n!=0){
+        int a=n%10;
+        if(a%2!=0){
+            count = count+1;
+        }
+        n = n/10;
+    }
+    cout<<count;
+}
+
+
+//maximum digit in a number
+#include<iostream>
+#include<climits>
+using namespace std;
+int main(){
+    int n =46723;
+    int temp=n;
+    int count=0;
+    if(n==0){
+        count=1;
+    }
+    else{
+        while(temp!=0){
+        count++;
+        temp=temp/10;
+        }
+    }
+    int arr[count];
+    for(int i=count-1 ; i>=0;i--){
+        arr[i] = n%10;
+        n=n/10;
+    }
+    int mx=INT_MIN;
+    for(int i=0 ; i<count;i++){
+        if(mx<arr[i]){
+            mx= arr[i];
+        }
+    }
+    cout<<mx; 
+
+}
